@@ -1,10 +1,10 @@
 import numpy as np
 
 from blockworld import BlockWorldEnv
-import random
 
-class QLearning():
-	# don't modify the methods' signatures!
+
+class QLearning:
+
 	def __init__(self, env: BlockWorldEnv):
 		self.env = env
 		self.q_function = dict()
