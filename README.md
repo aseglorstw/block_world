@@ -13,7 +13,9 @@ To solve this task, we use the Q-Learning algorithm. Q-Learning is a fundamental
    * Use the `reset()` method to start a new episode and get the initial state.
    * Use the `step(a)` method to perform action `a`, getting a new state, reward, and a completion status (`done`).
    * Update Q-values using the Q-Learning update rule:
-     $$ Q(s, a) = (1 - \alpha) \times Q(s, a) + \alpha \times (r + \gamma \times \max(Q(s', a'))) $$
+     
+
+     $Q(s, a) = (1 - \alpha) \times Q(s, a) + \alpha \times (r + \gamma \times \max(Q(s', a')))$
    * Repeat these steps until the completion condition is met.
 
 4. **Action Selection (Policy)**: After training, use the `act(s)` method to select an action based on the current state. We choose the action with the highest Q-value, but also consider the `epsilon` factor to occasionally select random actions, allowing exploration of possible alternatives.
